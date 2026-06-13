@@ -1,0 +1,202 @@
+\documentclass[10pt,letterpaper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ATS-OPTIMIZED RESUME - ONE PAGE VERSION
+% This version uses simple formatting that works with most ATS systems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{paperheight=11in,paperwidth=8.5in,left=0.3in,right=0.3in,top=0.2in,bottom=0.2in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Modern, professional fonts - ATS compatible
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Alternative: Use Latin Modern Sans for a cleaner look
+% \usepackage{lmodern}
+% \renewcommand{\familydefault}{\sfdefault}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Remove extra spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Hyperlink setup - ATS friendly
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% Custom section formatting - simple and ATS-friendly
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalsize\bfseries\uppercase}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Custom subsection formatting
+\titleformat{\subsection}
+  {\small\bfseries}
+  {}
+  {0em}
+  {}
+\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+
+% Reduce list spacing
+\setlist{nosep, leftmargin=*, after=\vspace{1pt}, itemsep=0.5pt, topsep=1pt}
+
+% Custom commands for consistent formatting
+\newcommand{\resumeheader}[1]{%
+  \begin{center}
+    \textbf{\Large #1}
+  \end{center}
+  \vspace{-15pt}
+}
+
+\newcommand{\contactline}[1]{%
+  \begin{center}
+    \small #1
+  \end{center}
+  \vspace{-10pt}
+}
+
+\newcommand{\jobheader}[4]{%
+  \subsection*{\textbf{#1} | #2  \hfill #4}
+  \vspace{-1pt}
+  {\small\textit{Technical Skills: #3}}
+  \vspace{0pt}
+}
+
+\newcommand{\educationheader}[3]{%
+  \subsection*{\textbf{#1} | #2}
+  \vspace{-2pt}
+  {\small #3}
+  \vspace{-2pt}
+}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumeheader{AKASH JAIN}
+
+\contactline{
+  aan.akash@gmail.com | +1 916 740 5652 | Folsom, CA | linkedin.com/in/akashjainusc
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROFESSIONAL SUMMARY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Professional Summary}
+
+{\small
+Principal Solutions Engineer with 13+ years driving High-Speed IO IP Validation, Emulation and FPGA solutions for semiconductor leaders. Deep expertise in PCIe Gen4-7, USB4, CXL, and ARM architectures. Proven success leading cross-functional teams, architecting protocol-aware validation frameworks, and delivering customer-ready emulation platforms that accelerate time-to-market. Track record of \$700k+ cost savings through innovative FPGA optimization and validation reuse strategies.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Professional Experience}
+
+\jobheader{Principal Solutions Engineer}{Synopsys, CA}{ZeBu, PCIe Gen6/7, CXL, USB4, NVMe, Ethernet, IXIA}{Nov 2024 -- Present}
+
+\begin{itemize}
+\item Authored PCIe Gen6/Gen7 transactor test plans achieving 100\% protocol compliance for 10+ Tier-1 customers
+\item Enabled 10+ customer deployments using QEMU virtual platforms, reducing bring-up time by weeks per program
+\item Designed multi-configuration PCIe/CXL/USB development kits adopted by 15+ AEs, cutting integration timelines by 3 months
+\item Architected ARM AI SOC validation solution (NoC, HBM, PCIe \& Ethernet) with ARM BSA/SBSA tools for NVMe/NIC testing
+\end{itemize}
+
+\jobheader{FPGA/Emulation/Testchip Senior Lead - HSIO}{Intel Corporation, CA}{USB-C, USB4 80G, PCIe, Firmware}{Jan 2023 -- Nov 2024}
+
+\begin{itemize}
+\item Directed cross-org execution for USB4 80G Testchips, coordinating PHY, SIP, firmware \& validation teams to hit tape-in milestones
+\item Defined USB4 Gen4 validation architecture and delivered Emulation/FPGA models for USB4 and PCIe IPs
+\item Led 10+ senior engineers across multiple geographies; optimized FPGA model saving \$500k in capital costs
+\end{itemize}
+
+\jobheader{FPGA/Emulation/Testchip Lead - HSIO}{Intel Corporation, CA}{USB-C, USB4, PCIe, Firmware}{Jan 2019 -- Dec 2022}
+
+\begin{itemize}
+\item Delivered Intel's first USB4 Host with PCIe \& USB tunneling, enabling Silicon test content reuse
+\item Architected Protocol Aware Speed Bridge for USB4 (20G/40G) and PCIe (16G/8L) enabling cross-speed reuse
+\item Optimized IP FPGA to SOC validation, saving \$200k/SOC and reducing development time by 3 months
+\item Enhanced TBT Firmware Validation with full end-to-end coverage; established SLA with Synopsys for C20-PHY qualification
+\end{itemize}
+
+\jobheader{FPGA \& Testchip Methodology Lead}{Intel Corporation, CA}{USB3.x, PCIe Gen4, HSIO PHY, BIOS}{Jan 2016 -- Dec 2018}
+
+\begin{itemize}
+\item Validated USB3.2/PCIe Gen4 subsystems using Testchips and FPGA platforms, resolving 50+ critical bugs
+\item Engineered HSIO validation architectures for 10G/20G compliance; implemented AIO validation environment with regression automation
+\item Prototyped USB \& PCIe Next Gen products using Xilinx FPGAs on Synopsys HAPS, accelerating development cycles
+\item Formalized power-aware UPF flows for 10+ IPs; debugged Post Silicon failures leveraging deep IP knowledge
+\end{itemize}
+
+\jobheader{FPGA Early Prototyping Engineer}{Intel Corporation, CA}{USB3.x, USB2.0, XHCI, SystemVerilog}{Jun 2012 -- Dec 2015}
+
+\begin{itemize}
+\item Completed USB Host \& Device Controller validation on 4+ projects; designed FPGA modules for xHCI interface coverage
+\item Identified and resolved design bugs ensuring high-quality performance testing with multiple vendor USB devices
+\end{itemize}
+\vspace{-4pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection*{\textbf{M.S. Electrical Engineering, University of Southern California, CA} \hfill May 2013}
+%{\small Specialization: Logic Design \& Computer Architecture}
+\subsection*{\textbf{B.E. Electronics \& Telecommunication Engineering, Mumbai University, India} \hfill May 2011}
+\vspace{4pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills}
+
+{\small
+\textbf{Protocols \& IP:} PCIe Gen4/5/6/7, CXL 2.0, USB4 (80G), USB3.x, USB-C, Thunderbolt, NVMe, Ethernet, SERDES, HSIO PHY, PIPE 6, AXI, APB, I2C
+
+\textbf{Emulation \& Validation:} ZeBu Server, QEMU Virtual Platforms, Ixia Traffic Generator, DPI Transactors, Pre/Post Silicon Validation, Protocol Compliance Testing, Regression Automation
+
+\textbf{FPGA Platforms:} Synopsys HAPS (DX/70/80/100), Xilinx Ultrascale/Ultrascale+, ProtoCompiler, Synthesis, Partition, Place \& Route, Timing Convergence
+
+\textbf{Design \& Methodologies:} Verilog/SystemVerilog HDL, ASIC/FPGA Design Flow, UPF Power Flows, OVM, Computer Architecture, Logic Analyzer, Oscilloscope
+
+\textbf{Architectures \& Systems:} Intel x86, ARM BSA/SBSA, NoC, HBM, AI SOC, BIOS, Firmware, Device Drivers
+
+\textbf{Programming \& Tools:} Python, C/C++, GDB, Bash, Git, Waveform Debug (Verdi), Logic Analysis
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LEADERSHIP & ACHIEVEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Leadership \& Achievements}
+
+\begin{itemize}
+\item Technical Reviewer for FPGA, Emulation \& Validation Track at Intel Technical Conferences; published 8 papers at DTTC and Architecture/Validation Conferences
+\item Represented Intel at 4 USB-IF global conferences presenting cutting-edge USB technology to industry vendors
+\item Organized 50+ technical training sessions for 400+ colleagues across 4 business units, building organizational expertise
+\item Mentored 10 junior engineers, reducing onboarding time and developing SMEs in HSIO technologies
+\item Established SLA between Intel \& Synopsys for Next Gen product line; Hiring Manager for Emulation, FPGA \& HSIO roles
+\end{itemize}
+
+\end{document}

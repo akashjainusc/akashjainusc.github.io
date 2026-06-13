@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Jain | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter">AKASH <span class="text-blue-500">JAIN</span></span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#impact" class="hover:text-blue-400 transition">Impact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                    Engineering the <span class="gradient-text">Future of HSIO.</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-8 max-w-md">
+                    Principal Solutions Engineer with 13+ years experience in High-Speed IO IP Validation, Emulation, and FPGA solutions for global semiconductor leaders.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#experience" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-bold transition shadow-lg shadow-blue-500/20">View Experience</a>
+                    <a href="mailto:aan.akash@gmail.com" class="border border-white/10 hover:bg-white/5 px-8 py-3 rounded-full font-bold transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="hidden md:block relative">
+                <div class="absolute -inset-4 bg-blue-600/20 blur-3xl rounded-full"></div>
+                <div class="relative glass-card p-8 rounded-3xl border border-white/10">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Core Expertise</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> PCIe Gen 4/5/6/7</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> USB4 (80G) & CXL 2.0</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> FPGA/Emulation (ZeBu, HAPS)</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> ARM & x86 Architectures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 bg-[#1e293b]/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-blue-500">Experience</span></h2>
+            <div class="space-y-16 relative before:absolute before:inset-0 before:ml-5 before:border-l border-white/10">
+                <!-- Synopsys -->
+                <div class="relative pl-12">
+                    <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6.5px] border-4 border-[#1e293b]"></div>
+                    <h3 class="text-xl font-bold text-white">Principal Solutions Engineer</h3>
+                    <p class="text-blue-400 mb-2">Synopsys, CA | Nov 2024 — Present</p>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li>• Authored PCIe Gen6/Gen7 transactor test plans (100% compliance for 10+ Tier-1 customers)</li>
+                            <li>• Enabled 10+ customer deployments using QEMU virtual platforms.</li>
+                            <li>• Designed multi-configuration PCIe/CXL/USB development kits adopted by 15+ AEs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Intel -->
+                <div class="relative pl-12">
+                    <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6.5px] border-4 border-[#1e293b]"></div>
+                    <h3 class="text-xl font-bold text-white">FPGA/Emulation/Testchip Lead (Multiple Roles)</h3>
+                    <p class="text-blue-400 mb-2">Intel Corporation, CA | Jan 2016 — Nov 2024</p>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li>• Directed cross-org execution for USB4 80G Testchips.</li>
+                            <li>• Architected Protocol Aware Speed Bridge for USB4 (20G/40G) and PCIe (16G/8L).</li>
+                            <li>• Optimized IP FPGA to SOC validation, saving $500k in capital costs.</li>
+                            <li>• Validated USB3.2/PCIe Gen4 subsystems using Testchips & FPGA platforms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-bold">Technical <span class="text-blue-500">Arsenal</span></h2>
+            <p class="text-slate-400 mt-2">Mastery across hardware, protocols, and software systems.</p>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+            <!-- Protocols -->
+            <div class="glass-card p-8 rounded-2xl border border-white/10 hover:border-blue-500/50 transition duration-300">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">Protocols & IP</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">PCIe Gen4/5/6/7, CXL 2.0, USB4 (80G), USB3.x, NVMe, Ethernet, SERDES, HSIO PHY, AXI, I2C</p>
+            </div>
+            <!-- Emulation -->
+            <div class="glass-card p-8 rounded-2xl border border-white/10 hover:border-blue-500/50 transition duration-300">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">Emulation & Validation</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">ZeBu Server, QEMU Virtual Platforms, Ixia Traffic Generator, DPI Transactors, Pre/Post Silicon Validation</p>
+            </div>
+            <!-- Hardware -->
+            <div class="glass-card p-8 rounded-2xl border border-white/10 hover:border-blue-500/50 transition duration-300">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">FPGA Platforms</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Synopsys HAPS (DX/70/80/100), Xilinx Ultrascale+, ProtoCompiler, Synthesis, Partition, Place & Route</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-24 px-6 bg-[#1e293b]/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Leadership & <span class="text-blue-500">Impact</span></h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="text-blue-500 mr-2">✔</span> Technical Leadership</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li>• Published 8 papers at DTTC and Architecture/Validation Conferences.</li>
+                        <li>• Represented Intel at 4 USB-IF global conferences.</li>
+                        <li>• Organized 50+ training sessions for 400+ colleagues.</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="text-blue-500 mr-2">✔</span> Strategic Impact</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li>• Mentored 10+ junior engineers to technical proficiency.</li>
+                        <li>• Established critical SLAs between Intel & Synopsys.</li>
+                        <li>• Hiring Manager for Emulation, FPGA & HSIO roles.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-sm text-slate-500 mb-4">Education: M.S. Electrical Engineering (USC) | B.E. Electronics & Telecommunication</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:aan.akash@gmail.com" class="text-blue-400 hover:underline">Email</a>
+                <a href="https://linkedin.com/in/akashjain" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
