@@ -1,0 +1,32 @@
+/* Custom styles for portfolio and resume print */
+@media screen {
+  :root { --bg: #0f172a; --muted: #94a3b8; }
+  body { background: var(--bg); }
+}
+
+/* Resume print-friendly container */
+.resume-sheet {
+  max-width: 800px;
+  margin: 32px auto;
+  background: #ffffff;
+  color: #0b1220;
+  padding: 28px 36px;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+}
+
+.resume-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.resume-name { font-size: 22px; font-weight:700; letter-spacing: 0.6px; }
+.resume-contact { font-size: 13px; color: #374151; }
+
+.section-title { font-weight:700; color:#0f172a; margin-top:12px; margin-bottom:8px; }
+.muted { color: #6b7280; font-size: 13px; }
+
+@media print {
+  body { background: #fff; }
+  nav, .no-print { display: none !important; }
+  .resume-sheet { box-shadow: none; margin: 0; padding: 0.4in; border-radius: 0; }
+}
+
+/* Small utilities */
+.badge { background:#eef2ff; color:#3730a3; padding:4px 8px; border-radius:999px; font-weight:600; font-size:12px; }
