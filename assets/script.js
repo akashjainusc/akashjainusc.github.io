@@ -1,4 +1,5 @@
-// Mobile nav toggle
+// Mobile nav toggle and smooth anchor scrolling
+// Use this file to update menu open/close behavior or to add additional page interactions.
 document.addEventListener('DOMContentLoaded', function(){
   const btn = document.getElementById('mobile-menu-btn');
   const panel = document.getElementById('mobile-panel');
@@ -9,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function(){
       const hidden = panel.classList.toggle('hidden');
       open.classList.toggle('hidden');
       close.classList.toggle('hidden');
-      // toggle aria-expanded
+      // toggle aria-expanded for accessibility state
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
     });
   }
 
-  // Smooth scroll for internal anchors
+  // Smooth scroll for internal anchors; update if you want to add custom offset behavior
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click', (e)=>{
       const href = a.getAttribute('href');

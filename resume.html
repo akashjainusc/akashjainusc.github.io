@@ -6,18 +6,22 @@
   <title>Akash Jain — Resume</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <style>
+    /* Page font fallback stack for consistent resume rendering */
     body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    /* Action buttons only visible on screen, hidden when printing */
     .print-actions { display:flex; gap:12px; justify-content:flex-end; margin:16px 0; }
     @media print { .print-actions { display:none; } }
   </style>
 </head>
 <body>
   <div class="resume-sheet">
+    <!-- Print / PDF controls: do not display when the resume is printed -->
     <div class="print-actions no-print">
       <a href="index.html" class="badge">Back to Portfolio</a>
       <button onclick="window.print()" class="badge">Print / Save as PDF</button>
     </div>
 
+    <!-- Header section includes name, contact info, and current role -->
     <header class="resume-header">
       <div>
         <div class="resume-name">AKASH JAIN</div>
@@ -26,11 +30,13 @@
       <div class="text-right muted">Principal Solutions Engineer</div>
     </header>
 
+    <!-- Professional summary: update this overview to reflect your current role and priorities -->
     <section>
       <h4 class="section-title">Professional Summary</h4>
       <p class="muted">Principal Solutions Engineer with 13+ years driving High-Speed IO IP Validation, Emulation and FPGA solutions for semiconductor leaders. Deep expertise in PCIe Gen4-7, USB4, CXL, and ARM architectures. Proven success leading cross-functional teams, architecting protocol-aware validation frameworks, and delivering customer-ready emulation platforms that accelerate time-to-market. Track record of $700k+ cost savings through innovative FPGA optimization and validation reuse strategies.</p>
     </section>
 
+    <!-- Professional experience section: add or edit each role block for clarity -->
     <section>
       <h4 class="section-title">Professional Experience</h4>
       <div>
@@ -57,6 +63,7 @@
       </div>
     </section>
 
+    <!-- Education section: update institution names or degrees as needed -->
     <section>
       <h4 class="section-title">Education</h4>
       <div>
@@ -67,6 +74,7 @@
       </div>
     </section>
 
+    <!-- Skills section: add new technology stacks or tools here -->
     <section>
       <h4 class="section-title">Technical Skills</h4>
       <p class="muted">Protocols & IP: PCIe Gen4/5/6/7, CXL 2.0, USB4 (80G), USB3.x, USB-C, Thunderbolt, NVMe, Ethernet, SERDES, HSIO PHY, AXI, APB, I2C</p>
@@ -74,6 +82,7 @@
       <p class="muted">FPGA Platforms: Synopsys HAPS, Xilinx Ultrascale, ProtoCompiler</p>
     </section>
 
+    <!-- Leadership section: keep this up to date with your latest mentorship and organizational impact -->
     <section>
       <h4 class="section-title">Leadership & Achievements</h4>
       <ul class="muted">

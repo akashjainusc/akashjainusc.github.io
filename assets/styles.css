@@ -1,4 +1,5 @@
 /* Custom styles for portfolio and resume print */
+/* Use CSS variables to make theme colors easier to update */
 @media screen {
   :root { --bg: #0f172a; --muted: #94a3b8; }
   body { background: var(--bg); }
@@ -19,14 +20,111 @@
 .resume-name { font-size: 22px; font-weight:700; letter-spacing: 0.6px; }
 .resume-contact { font-size: 13px; color: #374151; }
 
+/* Highlight style for experience skill sets */
+.experience-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1rem;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.95), rgba(56, 189, 248, 0.18));
+  border-radius: 999px;
+}
+.experience-item {
+  position: relative;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  top: 1.25rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: #0ea5e9;
+  border: 3px solid #0f172a;
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.35);
+}
+.experience-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.experience-card-wrapper .important-skills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 999px;
+  padding: 0.9rem 1rem;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.experience-card-wrapper .important-skills-label {
+  font-weight: 700;
+  color: #bfdbfe;
+  white-space: nowrap;
+}
+.experience-card-wrapper .skill-pill {
+  background: rgba(255,255,255,0.08);
+  color: #e2e8f0;
+  border: 1px solid rgba(148,163,184,0.18);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+}
+.experience-content {
+  position: relative;
+}
+.experience-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.experience-content li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+.experience-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #38bdf8;
+}
+.experience-content li span {
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .experience-card-wrapper .important-skills {
+    justify-content: center;
+  }
+}
+
 .section-title { font-weight:700; color:#0f172a; margin-top:12px; margin-bottom:8px; }
 .muted { color: #6b7280; font-size: 13px; }
 
+/* Print-specific overrides: hide interface elements and remove shadows */
 @media print {
   body { background: #fff; }
   nav, .no-print { display: none !important; }
   .resume-sheet { box-shadow: none; margin: 0; padding: 0.4in; border-radius: 0; }
 }
 
-/* Small utilities */
+/* Small utility classes used by buttons and badge links */
 .badge { background:#eef2ff; color:#3730a3; padding:4px 8px; border-radius:999px; font-weight:600; font-size:12px; }
